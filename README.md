@@ -1,8 +1,10 @@
 # Petroli WordPress Theme
 
+![Petroli Theme Preview](screenshot.png)
+
 ## Overview
 
-Petroli is a custom WordPress theme developed by Nimrod Musungu. It's designed to provide a sleek and modern interface for WordPress-based websites. This theme is tailored to suit various industries, providing customizable features and a user-friendly design.
+Petroli is a custom WordPress theme developed by Nimrod Musungu, inspired by the design located at [Figma - Petroil - Oil & Gas Website Design](<https://www.figma.com/file/HqxLBBr35bHIdmHpRXRGKQ/Petroil---Oil-%26-Gas-Website-Design-(Community)?type=design&node-id=1506-18&mode=design&t=uMp4f7EEi0tukMZ3-0>). It's designed to provide a sleek and modern interface for WordPress-based websites. This theme is tailored to suit various industries, providing customizable features and a user-friendly design.
 
 ## Features
 
@@ -32,7 +34,8 @@ Contributions to Petroli are welcome. Fork the repository, make changes, and sub
 ## Credits
 
 - **Developer:** Nimrod Musungu
-- **Framework:** WordPress
+- **Design Inspiration:** [Figma - Petroil - Oil & Gas Website Design](<https://www.figma.com/file/HqxLBBr35bHIdmHpRXRGKQ/Petroil---Oil-%26-Gas-Website-Design-(Community)?type=design&node-id=1506-18&mode=design&t=uMp4f7EEi0tukMZ3-0>)
+- **Designer:** Unknown
 
 ## License
 
