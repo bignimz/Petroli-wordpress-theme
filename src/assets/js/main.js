@@ -17,13 +17,17 @@ $(document).ready(() => {
     }, 300);
   });
 
+  let scrolled = false;
+
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $(".topbar-section").css("opacity", "0"); // Hide top bar
-      $(".header-section").addClass("fixed").css("top", "0"); // Fix header
-    } else {
-      $(".topbar-section").css("opacity", "1"); // Show top bar
-      $(".header-section").removeClass("fixed").css("top", "0"); // Unfix header
+    if ($(this).scrollTop() > 200 && !scrolled) {
+      $(".topbar-section").addClass("hidden");
+      $(".header-section").addClass("fixed header-slide-in");
+      scrolled = true; // Set scrolled to true to prevent retriggering
+    } else if ($(this).scrollTop() <= 200 && scrolled) {
+      $(".topbar-section").removeClass("hidden");
+      $(".header-section").removeClass("fixed header-slide-in");
+      scrolled = false; // Set scrolled to false when scrolling back up
     }
   });
 

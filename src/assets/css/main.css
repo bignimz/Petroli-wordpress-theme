@@ -56,7 +56,7 @@ body {
   width: 100%;
   padding: 10px 0;
   border-bottom: 5px solid var(--secondary-color);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease;
   opacity: 1;
 }
 .topbar-section .topbar-section-container {
@@ -101,9 +101,23 @@ body {
   width: 100%;
   background-color: var(--primary-color);
   color: #fff;
-  transition: top 5s ease-in-out; /* Smooth transition for header appearance */
-  position: relative; /* Ensure proper positioning */
+  position: relative;
   top: 0;
+  z-index: 10;
+}
+
+.header-slide-in {
+  top: 0;
+  animation: slideInHeader 0.5s ease forwards;
+}
+
+@keyframes slideInHeader {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
 }
 
 .header-section-container {
@@ -136,12 +150,14 @@ body {
   .menu-item.current_page_item::after {
   content: "";
   width: 70px;
-  height: 5px;
+  height: 2px;
   position: absolute;
   background-color: var(--secondary-color);
   left: 50%;
   transform: translateX(-50%);
-  bottom: -29px;
+  bottom: -17px;
+  pointer-events: none;
+  cursor: default;
 }
 
 .header-section-container .header-nav .nav-list .menu-item {
@@ -153,16 +169,29 @@ body {
   position: relative;
 }
 
-.header-section-container .header-nav .nav-list .menu-item:hover > ::after {
+/* .header-section-container .header-nav .nav-list .menu-item:hover > ::before {
   transition: all ease 0.3s;
   content: "";
   width: 70px;
-  height: 4px;
+  height: 2px;
   position: absolute;
   background-color: var(--secondary-color);
   left: 50%;
   transform: translateX(-50%);
-  bottom: -29px;
+  animation: slideInHeader 0.5s ease forwards;
+} */
+
+.header-section-container .header-nav .nav-list .menu-item:hover > ::after {
+  transition: all ease 0.3s;
+  content: "";
+  width: 70px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--secondary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -17px;
+  animation: slideAcross 0.5s ease forwards;
 }
 
 .header-section-container
@@ -170,6 +199,15 @@ body {
   .nav-list
   .menu-item:last-child:hover
   > ::after {
+  transition: none !important;
+  content: none !important;
+}
+
+.header-section-container
+  .header-nav
+  .nav-list
+  .menu-item:last-child:hover
+  > ::before {
   transition: none !important;
   content: none !important;
 }
@@ -289,6 +327,24 @@ body {
   transition: border-bottom ease 0.4s;
 }
 
+/* HERO SECTION */
+.hero-section {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+  aspect-ratio: auto;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: center;
+}
+
 /* Footer */
 .site-footer {
   background-color: var(--bg-dark);
@@ -342,5 +398,38 @@ body {
 
   .topbar-section .top-contact-link {
     border-right: 0 !important;
+  }
+}
+
+/* Animation KeyFrames */
+
+@keyframes slideDownContent {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpContent {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideAcross {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-30px);
   }
 }
