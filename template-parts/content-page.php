@@ -1,3 +1,2 @@
-<div class="site-content">
-    <p><?php echo the_content(); ?></p>
-</div>
+<!-- For All Page templates -->
+<?php the_content(); ?>
