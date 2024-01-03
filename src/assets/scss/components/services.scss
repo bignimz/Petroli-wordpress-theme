@@ -1,0 +1,97 @@
+@import "./header.scss";
+
+.services_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //   justify-content: center;
+
+  .service_item {
+    padding: 120px 70px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    min-height: 410px;
+
+    .service_content {
+      color: #fff;
+      position: relative;
+      z-index: 2;
+
+      .service_title {
+        font-size: 36px;
+        line-height: 54px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .service-btn {
+        padding: 15px 40px;
+        background-color: var(--primary-color);
+        color: #fff;
+        transition: all ease 0.3s;
+        border: none;
+        outline: none;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--primary-color);
+          transition: all ease 0.3s;
+        }
+      }
+    }
+
+    &.has-intro {
+      position: relative;
+      z-index: 2;
+
+      .service_content {
+        width: 416px;
+        float: right;
+        margin-right: 60px;
+        // position: absolute;
+        // right: 144px;
+        // top: 60px;
+        height: fit-content;
+
+        .service_intro_title {
+          font-size: 64px;
+          line-height: 96px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          color: #000;
+        }
+
+        .service_intro_desc {
+          line-height: 24px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    .service_item {
+      padding: 70px 30px;
+      margin-bottom: 20px;
+      min-height: auto;
+      &.has-intro {
+        .service_content {
+          text-align: center;
+          height: fit-content;
+          width: 100%;
+
+          .service_intro_title {
+            font-size: 38px;
+            line-height: 38px;
+          }
+        }
+      }
+
+      &:first-of-type {
+        padding: 40px 10%;
+        height: fit-content;
+      }
+    }
+  }
+}

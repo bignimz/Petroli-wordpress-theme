@@ -1,5 +1,4 @@
 const $ = jQuery;
-
 $(document).ready(() => {
   let timer;
 
@@ -20,11 +19,11 @@ $(document).ready(() => {
   let scrolled = false;
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 200 && !scrolled) {
+    if ($(this).scrollTop() > 400 && !scrolled) {
       $(".topbar-section").addClass("hidden");
       $(".header-section").addClass("fixed header-slide-in");
       scrolled = true; // Set scrolled to true to prevent retriggering
-    } else if ($(this).scrollTop() <= 200 && scrolled) {
+    } else if ($(this).scrollTop() <= 400 && scrolled) {
       $(".topbar-section").removeClass("hidden");
       $(".header-section").removeClass("fixed header-slide-in");
       scrolled = false; // Set scrolled to false when scrolling back up

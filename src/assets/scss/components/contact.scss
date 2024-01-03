@@ -1,0 +1,100 @@
+@import "./header.scss";
+
+@mixin form-styles() {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 15px;
+  outline: none;
+}
+
+.contact_section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 70px;
+  margin: 100px 0;
+
+  .contact_left {
+    background-color: #f1f1f1;
+    padding: 50px;
+    border-bottom: 4px solid var(--primary-color);
+    height: fit-content;
+
+    .contact-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34px;
+      position: relative;
+      margin-bottom: 70px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(100% + 26px);
+        width: 70px;
+        height: 7px;
+        background-color: var(--primary-color);
+      }
+    }
+
+    .contact-text {
+      color: var(--bg-light);
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  .frm_button_submit {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    border: none !important;
+    padding: 15px 50px !important;
+    border-radius: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    .contact_left {
+      .contact-title {
+        margin-bottom: 50px;
+
+        &::after {
+          top: calc(100% + 20px);
+        }
+      }
+    }
+  }
+}
+
+.frm_forms {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    @include form-styles();
+  }
+
+  select {
+    @include form-styles();
+  }
+
+  textarea {
+    @include form-styles();
+  }
+
+  .form-input {
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .frm_fields_container {
+    display: block !important;
+  }
+
+  .frm_forms {
+    .form-input {
+      margin-bottom: 20px !important;
+    }
+  }
+}
