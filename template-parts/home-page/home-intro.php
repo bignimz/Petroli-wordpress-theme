@@ -9,8 +9,8 @@
 ?>
 
 <div class="site-content">
-    <div class="intro_section">
+    <div class="intro_section wow fadeInLeft" data-wow-duration="2s">
         <h1 class="intro-title"><?php esc_html_e($homeIntro); ?></h1>
-        <p class="intro-description"><?php esc_html_e($introContent); ?></p>
+        <div class="intro-description"><?php esc_html_e(wp_strip_all_tags($introContent)); ?></div>
     </div>
 </div>

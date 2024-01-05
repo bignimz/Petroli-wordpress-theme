@@ -13,7 +13,7 @@
                 <div class="header-section-container">
                     <!-- Logo -->
                     <div class="header-logo">
-                        <a href="<?php home_url(); ?>">Petroli</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>">Petroli</a>
                     </div>
                     <!-- Header Menu -->
                     <nav class="header-nav" role="navigation" aria-label="<?php esc_html_e('Main Navigation', 'petroli'); ?>">

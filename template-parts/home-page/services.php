@@ -3,7 +3,7 @@ $services = get_field('services');
 ?>
 
 <div class="services_section">
-    <div class="services_wrapper">
+    <div class="services_wrapper wow fadeInUpBig" data-wow-duration="2s">
         <?php
         if ($services) {
             foreach ($services as $service) {

@@ -1,6 +1,5 @@
 <?php get_header(); ?>    
-<div class="blog-posts-section container">
-    <?php wp_title(''); ?>
+<div class="blog-posts-section">
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>    
             <?php get_template_part('./template-parts/content', 'page'); ?>

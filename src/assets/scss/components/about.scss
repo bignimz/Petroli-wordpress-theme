@@ -1,0 +1,12 @@
+@import "./header.scss";
+
+.about_section {
+  margin-bottom: 50px;
+  .about-intro {
+    font-size: 64px;
+    line-height: 96px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+  }
+}
