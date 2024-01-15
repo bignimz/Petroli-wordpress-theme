@@ -1,8 +1,6 @@
 <?php
 
-$imagePath = get_template_directory_uri() . '/src/assets/images/';
-
-
+$imagePath = get_template_directory_uri() . '/dist/assets/images/';
 
 // Fetch ACF data for each post
 $sliders = get_field('slider_items'); 
@@ -16,8 +14,7 @@ $sliders = get_field('slider_items');
                 $description = $slide['slide_content'];
                 $ctaText = $slide['cta_text'];
                 $ctaLink = $slide['cta_link'];
-
-                ?>
+        ?>
 
                 <div class="slider-items__item" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('<?php echo esc_url($image); ?>')">
                     <div class="slider-items__content wow slideInUp" data-wow-duration="2s">
@@ -28,8 +25,7 @@ $sliders = get_field('slider_items');
                     </div>
                 </div>
 
-            <?php }
-        endif; ?>
+        <?php } endif; ?>
     </div>
     <button class="slick-arrow slick-prev custom-prev-arrow"><img src="<?php echo $imagePath . 'bi_arrow-left-short.png'; ?>" alt="Previous"></button>
     <button class="slick-arrow slick-next custom-next-arrow"><img src="<?php echo $imagePath . 'bi_arrow-right-short.png'; ?>" alt="Next"></button>

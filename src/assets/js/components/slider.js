@@ -9,11 +9,18 @@ $(document).ready(() => {
     nextArrow: $(".custom-next-arrow"),
   });
 
+  // Image Popup slider
+  // $(".popup-content").slick({
+  //   fade: true,
+  //   cssEase: "linear",
+  //   autoplay: false,
+  // });
+
   // Gallery Slider Settings
   $(".gallery_section").slick({
     fade: false,
     cssEase: "linear",
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
@@ -106,4 +113,4 @@ let wow = new WOW({
 });
 wow.init();
 
-AOS.init();
+// AOS.init();

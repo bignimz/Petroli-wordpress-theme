@@ -6,6 +6,8 @@
   color: #fff;
   padding: 20px 0;
   border-bottom: 5px solid var(--secondary-color);
+  position: relative;
+  bottom: -50px;
 
   .cta-container {
     display: flex;

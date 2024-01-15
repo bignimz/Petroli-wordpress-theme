@@ -13,7 +13,17 @@
                 <div class="header-section-container">
                     <!-- Logo -->
                     <div class="header-logo">
-                        <a href="<?php echo esc_url(home_url('/')); ?>">Petroli</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                            <?php 
+                                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                                if ( has_custom_logo() ) {
+                                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+                                } else {
+                                    echo '<h1>' . get_bloginfo('name') . '</h1>';
+                                }
+                            ?>
+                        </a>
                     </div>
                     <!-- Header Menu -->
                     <nav class="header-nav" role="navigation" aria-label="<?php esc_html_e('Main Navigation', 'petroli'); ?>">
@@ -31,5 +41,11 @@
             </div>
         </section>
         <!-- Header Section End -->
+
+        <?php if ( get_header_image() ) : ?>
+            <div id="site-header">
+                <img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            </div>
+        <?php endif; ?>
 
     

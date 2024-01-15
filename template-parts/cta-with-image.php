@@ -2,7 +2,7 @@
 $bgColor = get_field('bg_color');
 $ctaContent = get_field('cta_content');
 $ctaBtnText = get_field('cta_btn_text');
-$ctaUrl = get_field('cta_url');
+$ctaUrl = get_field('cta_Url');
 $coverImage = get_field('cover_image');
 $coverImageUrl = get_field('cover_image_url');
 

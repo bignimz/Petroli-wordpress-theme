@@ -50,10 +50,9 @@
 
         .service_content {
           width: 416px;
-          float: right;
           margin-right: 0px;
-          position: absolute;
-          right: 130px;
+          // position: absolute;
+          // right: 130px;
           // top: 60px;
           height: fit-content;
 
@@ -75,7 +74,10 @@
 
     @media (max-width: 991px) {
       grid-template-columns: 1fr;
+
       .service_item {
+        // width: calc(100% + -100px);
+        // margin: 0 auto;
         padding: 70px 30px;
         margin-bottom: 20px;
         min-height: auto;
