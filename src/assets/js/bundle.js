@@ -1,3 +1,4 @@
 import "./components/navigation.js";
 import "./components/slider.js";
-import $ from "jquery";
+import "./components/gallery-image.js";
+import "./components/main.js";

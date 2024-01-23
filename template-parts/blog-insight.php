@@ -16,7 +16,7 @@
              if ($homeBlog->have_posts()) : while ($homeBlog->have_posts()) : $homeBlog->the_post();
                  $blogImage = get_the_post_thumbnail_url(get_the_ID(), 'large'); // Get featured image URL for each post
              ?>
-                 <div class="blog-content" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?php echo $blogImage; ?>')">
+                 <div class="blog-content wow fadeInUpBig" data-wow-duration="2s" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?php echo $blogImage; ?>')">
                      <h2><?php esc_html_e(the_title()); ?></h2>
                      <a href="<?php echo esc_url(get_the_permalink()); ?>" class="read_more_btn">Read more</a>
                  </div>
@@ -28,6 +28,6 @@
              endif;
              ?>
         </div>
-        <a href="" class="blog_more">More From The blog <span class="link_arrow"><img src="<?php echo esc_url($linkArrow); ?>" alt=""></span></a>
+        <a href="<?php echo esc_url( get_bloginfo('url') ); ?>/blog" class="blog_more wow fadeIn"  data-wow-delay="1.5s" data-wow-duration="2s">More From The blog <span class="link_arrow"><img src="<?php echo esc_url($linkArrow); ?>" alt=""></span></a>
     </div>
 </div>

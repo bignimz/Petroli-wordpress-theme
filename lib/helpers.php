@@ -13,3 +13,12 @@ function petroli_menu_item_wrapper($items, $args) {
     return $items;
 }
 add_filter('wp_nav_menu_objects', 'petroli_menu_item_wrapper', 10, 2);
+
+// Allow Upload of SVG Images
+// Allow SVG file uploads
+function petroli_add_svg_to_upload_mimes($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['svgz'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'petroli_add_svg_to_upload_mimes');

@@ -107,11 +107,13 @@ export const scripts = () => {
 };
 
 export const compress = () => {
-  return gulp
-    .src(paths.packaged.src)
-    .pipe(replace("petroli", info.name))
-    .pipe(zip(`${info.name}.zip`))
-    .pipe(gulp.dest(paths.packaged.dest));
+  return (
+    gulp
+      .src(paths.packaged.src)
+      // .pipe(replace("petroli", info.name))
+      .pipe(zip(`${info.name}.zip`))
+      .pipe(gulp.dest(paths.packaged.dest))
+  );
 };
 
 export const watch = () => {
