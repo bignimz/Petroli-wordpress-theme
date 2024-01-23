@@ -9,4 +9,10 @@
     margin-bottom: 20px;
     color: #000;
   }
+
+  @media (max-width: 991px) {
+    .about-intro {
+      font-size: 38px;
+    }
+  }
 }

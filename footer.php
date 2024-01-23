@@ -1,35 +1,19 @@
 <?php wp_footer(); ?>
+<?php
+$footer_layout = "3,3,3,3";
+$columns = explode(',', $footer_layout);
+$footer_bg = 'dark';
+?>
 <footer class="site-footer">
     <div class="container">
         <div class="site-footer_wrapper">
-            <div class="site-footer-col">
-                <h2>Petroli</h2>
-                <p>info@petroli.com</p>
-                <p>+254 123 45678</p>
-                <p>101 Baker Street, New York, USA, 12345</p>
-                <p>www.petroli.com</p>
-            </div>
-            <div class="site-footer-col">
-                <h3>Company</h3>
-                <p>Home</p>
-                <p>About</p>
-                <p>Services</p>
-                <p>Gallery</p>
-            </div>
-            <div class="site-footer-col">
-                <h3>Others</h3>
-                <p>Blog</p>
-                <p>Contact</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="site-footer-col">
-                <h3>Certificates</h3>
-                <div class="certificates">
-                    <p>Certificate 1</p>
-                    <p>Certificate 2</p>
+            <?php foreach ($columns as $i => $column) { ?>
+                <div class="site-footer-col">
+                    <?php if (is_active_sidebar('footer-sidebar-' . ($i + 1))) : ?>
+                        <?php dynamic_sidebar('footer-sidebar-' . ($i + 1)); ?>
+                    <?php endif; ?>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </footer>

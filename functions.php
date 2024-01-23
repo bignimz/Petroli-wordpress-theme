@@ -2,6 +2,7 @@
 <?php require_once('lib/theme-features.php'); ?>
 <?php require_once('lib/menu-register.php'); ?>
 <?php require_once('lib/helpers.php'); ?>
+<?php require_once('lib/sidebars.php'); ?>
 
 
 

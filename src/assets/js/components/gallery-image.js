@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let popup = document.querySelector(".gallery-popup");
 
   document.querySelectorAll(".popup-trigger").forEach(function (image) {
+    image.addEventListener("mouseenter", function (e) {
+      e.preventDefault();
+    });
     image.addEventListener("click", function (event) {
       event.stopPropagation();
       popupImage.src = this.src;
@@ -29,4 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.style.display = "none";
     document.body.style.overflow = ""; // Enable body scrolling
   });
+
+  overlays = document.querySelectorAll(".gallery_item");
+  overlays.forEach(function (overlay) {});
 });
